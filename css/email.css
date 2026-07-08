@@ -1,0 +1,415 @@
+/* ==========================================
+   GENERAL
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#edf2f7;
+    height:100vh;
+    overflow:hidden;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+header{
+
+    height:70px;
+
+    background:#163A5F;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 30px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.2);
+}
+
+.logo{
+
+    font-size:24px;
+
+    font-weight:bold;
+}
+
+.user-info{
+
+    font-size:15px;
+}
+
+/* ==========================================
+   MAIN LAYOUT
+========================================== */
+
+.container{
+
+    display:grid;
+
+    grid-template-columns:220px 320px 1fr;
+
+    height:calc(100vh - 70px);
+}
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+aside{
+
+    background:#1d2d44;
+
+    color:white;
+
+    padding:20px;
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.composeButton{
+
+    background:#f28c28;
+
+    color:white;
+
+    border:none;
+
+    padding:14px;
+
+    border-radius:6px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    margin-bottom:30px;
+
+    transition:.25s;
+}
+
+.composeButton:hover{
+
+    background:#d97706;
+}
+
+.menuButton{
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    text-align:left;
+
+    padding:14px;
+
+    font-size:16px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    margin-bottom:8px;
+
+    transition:.2s;
+}
+
+.menuButton:hover{
+
+    background:#27496d;
+}
+
+/* ==========================================
+   EMAIL LIST
+========================================== */
+
+.emailList{
+
+    background:white;
+
+    border-right:1px solid #ddd;
+
+    overflow-y:auto;
+}
+
+.emailList h2{
+
+    padding:20px;
+
+    border-bottom:1px solid #ddd;
+
+    color:#163A5F;
+}
+
+.emailItem{
+
+    padding:18px;
+
+    border-bottom:1px solid #eee;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.emailItem:hover{
+
+    background:#f5f8fb;
+}
+
+.emailItem.active{
+
+    background:#dcecff;
+}
+
+.emailSender{
+
+    font-weight:bold;
+
+    color:#163A5F;
+
+    margin-bottom:4px;
+}
+
+.emailPreview{
+
+    color:#666;
+
+    font-size:14px;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+}
+
+/* ==========================================
+   EMAIL VIEWER
+========================================== */
+
+.emailViewer{
+
+    background:white;
+
+    padding:35px;
+
+    overflow-y:auto;
+}
+
+.emailViewer h2{
+
+    color:#163A5F;
+
+    margin-bottom:15px;
+}
+
+.emailViewer p{
+
+    margin-bottom:15px;
+}
+
+#emailBody{
+
+    margin-top:20px;
+
+    line-height:1.7;
+
+    white-space:pre-wrap;
+}
+
+.replyButton{
+
+    margin-top:30px;
+
+    background:#163A5F;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 24px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.replyButton:hover{
+
+    background:#2f5d8c;
+}
+
+/* ==========================================
+   MODAL
+========================================== */
+
+.modal{
+
+    display:none;
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.5);
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.modalContent{
+
+    width:650px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:8px;
+
+    position:relative;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.closeButton{
+
+    position:absolute;
+
+    top:15px;
+
+    right:20px;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    color:#888;
+}
+
+.closeButton:hover{
+
+    color:black;
+}
+
+.modalContent h2{
+
+    margin-bottom:25px;
+
+    color:#163A5F;
+}
+
+.modalContent label{
+
+    display:block;
+
+    margin-top:15px;
+
+    margin-bottom:6px;
+
+    font-weight:bold;
+}
+
+.modalContent input{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:5px;
+
+    font-size:15px;
+}
+
+.modalContent textarea{
+
+    width:100%;
+
+    resize:none;
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:5px;
+
+    margin-top:6px;
+
+    font-size:15px;
+}
+
+#sendButton,
+#replySendButton{
+
+    margin-top:25px;
+
+    width:100%;
+
+    background:#163A5F;
+
+    color:white;
+
+    border:none;
+
+    padding:14px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.25s;
+}
+
+#sendButton:hover,
+#replySendButton:hover{
+
+    background:#2f5d8c;
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#bbb;
+
+    border-radius:5px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#888;
+}

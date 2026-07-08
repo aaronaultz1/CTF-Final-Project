@@ -26,3 +26,11 @@ The player then enters buddy.
 
 The email responds 
 temporary password: Blahblah123 {you have captured the flag!}
+
+
+Sequence
+
+Stage 1: Inspect login.js to find valid credentials.
+Stage 2: Log in and find the email system.
+Stage 3: Email IT for a password reset.
+Stage 4: Answer the security question to obtain the flag.

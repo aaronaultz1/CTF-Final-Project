@@ -26,6 +26,13 @@ const users = [
     name: "Alex Carter",
     department: "IT",
     pet: "Pixel"
+},
+{
+    username: "a.aultz",
+    password: "cyberclass",
+    name: "Aaron Aultz",
+    department: "Developer",
+    pet: "Pepper"
 }
 
 ];

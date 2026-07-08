@@ -1,14 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Home</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Northstar Employee Portal</title>
+
+<link rel="stylesheet" href="css/home.css">
+
 </head>
 
 <body>
 
-<h1>Welcome!</h1>
+<header>
 
-<p>You successfully logged in.</p>
+    <div class="logo">
+        ★ Northstar Logistics
+    </div>
+
+    <nav>
+
+        <a href="#">Dashboard</a>
+        <a href="#">Shipments</a>
+        <a href="#">Inventory</a>
+        <a href="email.html">Email</a>
+        <a href="#">HR</a>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </nav>
+
+</header>
+
+<div class="container">
+
+    <aside>
+
+        <h2>Employee</h2>
+
+        <p><strong>Name:</strong> <span id="employeeName"></span></p>
+
+        <p><strong>Department:</strong> <span id="employeeDepartment"></span></p>
+
+        <p><strong>Date:</strong> <span id="currentDate"></span></p>
+
+    </aside>
+
+    <main>
+
+        <section class="welcome">
+
+            <h1>
+                Welcome back,
+                <span id="welcomeName"></span>
+            </h1>
+
+            <p>
+                Northstar Logistics Employee Portal
+            </p>
+
+        </section>
+
+        <section class="cards">
+
+            <div class="card">
+                <h3>Today's Shipments</h3>
+                <p>126 Deliveries</p>
+            </div>
+
+            <div class="card">
+                <h3>Warehouse Inventory</h3>
+                <p>18,432 Items</p>
+            </div>
+
+            <div class="card">
+                <h3>Open Support Tickets</h3>
+                <p>14 Active</p>
+            </div>
+
+            <div class="card">
+                <h3>Fleet Status</h3>
+                <p>97% Operational</p>
+            </div>
+
+        </section>
+
+        <section class="announcements">
+
+            <h2>Company Announcements</h2>
+
+            <ul>
+
+                <li>✔ Cybersecurity Awareness Training due Friday.</li>
+
+                <li>✔ Fleet maintenance scheduled Saturday.</li>
+
+                <li>✔ Welcome our new warehouse employees.</li>
+
+                <li>✔ IT maintenance begins at 10:00 PM tonight.</li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/home.js"></script>
 
 </body>
+
 </html>
