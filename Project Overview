@@ -1,0 +1,28 @@
+Capture the Flag
+
+Create Fake Company Login Page
+Contains unsafe database query
+Use html, css, javascript, and Python FLASK
+
+
+query = f"""
+SELECT *
+FROM users
+WHERE username='{username}'
+AND password='{password}'
+"""
+
+From the Sequal query, use the username {Justin_Flag} and password (user's password is ILOVEBUDDY)
+
+Once inside the company portal, find special IT support
+
+Enter into email section
+
+Player emails IT message to reset password
+Player recieves automated message from IT email asking for security question.
+
+What is your pet's name?
+The player then enters buddy.
+
+The email responds 
+temporary password: Blahblah123 {you have captured the flag!}
